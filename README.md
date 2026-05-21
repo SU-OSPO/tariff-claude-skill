@@ -22,7 +22,7 @@ Hierarchical descriptions in the source PDF are flattened with `:` so each row i
 
 ## Requirements
 
-- A Pro, Team, or Enterprise Claude subscription. The free tier does not support skills.
+- A Claude account with skills enabled. See the [Claude help center](https://support.claude.com/en/articles/12512180-use-skills-in-claude) for plan-specific setup.
 - A Schedule A tariff PDF to digitize. The skill has been calibrated on the 1939 and 1950 editions and works on similar yearly schedules.
 
 ## Installation
@@ -35,7 +35,7 @@ Hierarchical descriptions in the source PDF are flattened with `:` so each row i
 
 1. Start a new conversation at [claude.ai](https://claude.ai).
 2. Upload your tariff PDF via the attachment icon.
-3. Ask Claude to extract it by using the `/tariff-doc-skill`.
+3. Ask Claude to extract it by using the `/tariff-doc-skill` command or with natural language.
 4. Wait for processing — a few minutes, depending on page count.
 5. Download the output files Claude presents.
 
