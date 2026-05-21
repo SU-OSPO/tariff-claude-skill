@@ -45,11 +45,14 @@ Hierarchical descriptions in the source PDF are flattened with `:` so each row i
 
 Each run produces:
 
-- An Excel (`.xlsx`) spreadsheet and a matching CSV with one row per commodity
-- A separate metadata CSV
+- An Excel (`.xlsx`) workbook with three sheets: `Tariff Data`, `Metadata`, and `Footnotes`
+- A matching CSV of the `Tariff Data` sheet
+- A matching CSV of the `Metadata` sheet
 - A copy of the original PDF for verification
 
-Schema of the `Tariff Data` sheet:
+### `Tariff Data` sheet
+
+One row per commodity.
 
 | Column | Description |
 |---|---|
@@ -57,8 +60,29 @@ Schema of the `Tariff Data` sheet:
 | Schedule A Commodity Number | Normalized commodity number (e.g., `0010 000`) |
 | Commodity Description | Full hierarchical description, flattened with `:` |
 | Unit of Quantity | Reporting unit and code |
-| Rate of Duty | One or more duty rates, joined with `;`; footnote markers preserved |
+| Rate of Duty | One or more duty rates, joined with `;`; footnote markers preserved as superscript Unicode (¹, ², etc.) |
 | Tariff Paragraph | One or more paragraph numbers, joined with `;` |
+
+### `Metadata` sheet
+
+A two-column key-value table (`Field`, `Value`) intended as a provenance record so downstream users can audit how the data was produced. Fields include:
+
+- Source document identifiers (filename, title, edition, groups and sections covered)
+- Processing statistics (pages processed, total rows extracted, extraction date, extraction method)
+- Per-column transformation rules (e.g., how period notation was converted to the spaced `XXXX XXX` format)
+- Notes on edge cases (bilateral bound rates, compound paragraph references, footnote-handling caveats, ALL CAPS section headers excluded as hierarchy resets)
+
+### `Footnotes` sheet
+
+Captures footnotes from the source PDF separately so they can be joined back to `Tariff Data` rows by marker.
+
+| Column | Description |
+|---|---|
+| Page Number | Page in the source PDF where the footnote appears |
+| Footnote Marker | Marker as printed in the source (e.g., `1`, `2`) |
+| Footnote Text | Full text of the footnote |
+
+The same marker may appear on multiple pages with different meanings, so joins typically need both `Page Number` and `Footnote Marker`.
 
 ## Troubleshooting
 
