@@ -1,0 +1,117 @@
+Schedule A Commodity Number,Commodity Description,Tariff Paragraph
+0010 600,Cattle: Weighing less than 200 pounds each (calves),701
+0010 700,Cattle: Weighing 200 pounds and less than 700 pounds each,701
+0010 800,Cattle: Weighing 700 pounds or more each: Cows for dairy purposes,701
+0010 900,"Cattle: Weighing 700 pounds or more each: Cattle, n.s.p.f.",701
+0012 000,Sheep and lambs,702
+0012 200,Goats,702
+0013 000,Hogs,703
+0014 000,"Poultry, live: Turkeys",711
+0015 000,"Poultry, live: Chickens, ducks, geese, and guineas",711
+0015 500,"Poultry, live: Baby chicks of poultry",711
+0018 000,"Fresh, chilled, or frozen: Beef",701
+0019 000,"Fresh, chilled, or frozen: Veal",701
+0020 100,"Fresh, chilled, or frozen: Pork: Fresh or chilled",703
+0020 500,"Fresh, chilled, or frozen: Pork: Frozen",703
+0021 000,"Fresh, chilled, or frozen: Mutton",702
+0022 000,"Fresh, chilled, or frozen: Lamb",702
+0023 100,"Fresh, chilled, or frozen: Goat meat",702
+0023 200,"Fresh, chilled, or frozen: Reindeer meat",704
+0023 300,"Fresh, chilled, or frozen: Venison",704
+0023 500,"Fresh, chilled, or frozen: Game (except birds), n.s.p.f. (specify by name)",704
+0023 600,"Fresh, chilled, or frozen: Edible offal: Livers, kidneys, tongues, hearts, sweetbreads, tripe, and brains",706
+0023 800,"Fresh, chilled, or frozen: Frog legs (C. D. 610--4/6/42)",1558
+0023 900,"Fresh, chilled, or frozen: Meats, n.s.p.f.",706
+0024 000,"Fresh, chilled, or frozen: Birds, including poultry: Dead, dressed, or undressed: Turkeys",712
+0025 400,"Fresh, chilled, or frozen: Birds, including poultry: Dead, dressed, or undressed: Chickens and guineas",712
+0025 500,"Fresh, chilled, or frozen: Birds, including poultry: Dead, dressed, or undressed: Ducks and geese",712
+0025 900,"Fresh, chilled, or frozen: Birds, including poultry: Dead, dressed, or undressed: Birds n.s.p.f (including game birds)",712
+0026 500,"Prepared or preserved: Turkeys, prepared or preserved n.s.p.f (formerly part of 0026 000)",712
+0026 900,"Prepared or preserved: Birds, including poultry, prepared or preserved, n.e.s. (formerly part of 0026 000)",712
+0028 000,"Prepared or preserved: Canned beef, including corned beef",706
+0029 000,"Prepared or preserved: Beef and veal, pickled or cured",706
+0030 100,"Prepared or preserved: Pork: Hams, shoulders, and bacon (include backs, butts, and picnics): Not cooked, boned, or canned, or made into sausage",703
+0030 500,"Prepared or preserved: Pork: Hams, shoulders, and bacon (include backs, butts, and picnics): Pork sausage, except fresh pork sausage (from 0030 900)",703
+0030 900,"Prepared or preserved: Pork: Hams, shoulders, and bacon (include backs, butts, and picnics): Other",703
+0031 100,"Prepared or preserved: Pork: Other, pickled or salted: Not cooked, boned, or canned, or made into sausage",703
+0031 500,"Prepared or preserved: Pork: Other, pickled or salted: Pork sausage, except fresh pork sausage (from 0031 900)",703
+0031 900,"Prepared or preserved: Pork: Other, pickled or salted: Other",703
+0032 100,"Prepared or preserved: Meat pastes (except liver pastes), prepared or preserved, n.s.p.f., packed in airtight containers weighing each, with container, not over 3 ounces",706
+0032 800,"Prepared or preserved: Frog legs, prepared or preserved (C. D. 610--4/6/42)",1558
+0032 900,"Prepared or preserved: Canned meats, n.e.s., and prepared or preserved meats n.s.p.f. (include liver paste) (specify by name)",706
+0034 000,"Sausage casings: Sheep, lamb, and goat casings",1755
+0035 500,"Sausage casings: Sausage casings, n.s.p.f. (specify by name) (Include weasands, bladders, and intestines)",1755
+0036 000,Lard,703
+0036 100,Lard compounds and lard substitutes made from animal or vegetable oils and fats,703
+0036 200,Oleo oil,"701, 2491 (c) I.R.C"
+0036 300,Oleo stearin,"701, 2491 (c) I.R.C"
+0036 500,Oleomargarine and other butter substitutes made from animal or vegetable oils and fats,709
+0036 600,"Beef and mutton tallow (include oleo stock) (T. D. 48876) (Inedible tallow, see 0815 600)","701, 2491 (c) I.R.C"
+0036 900,"Animal oils and fats, n.e.s. (Include edible chicken fat formerly reported in 0821 100)",52
+0037 000,Milk and cream: Cream,707
+0038 000,Milk and cream: Whole milk,707
+0038 200,Milk and cream: Skimmed milk and buttermilk,707
+0040 000,Milk and cream: Condensed or evaporated milk: In airtight containers: Unsweetened,708 (a)
+0040 100,Milk and cream: Condensed or evaporated milk: In airtight containers: Sweetened,708 (a)
+0040 700,Milk and cream: Condensed or evaporated milk: All other (specify by name),708 (a)
+0041 000,"Milk and cream: Whole milk, dried",708 (b)
+0041 100,"Milk and cream: Skimmed milk, dried",708 (b)
+0041 200,"Milk and cream: Buttermilk, dried",708 (b)
+0041 300,"Milk and cream: Cream, dried",708 (b)
+0041 900,"Milk and cream: Malted milk and compounds, or mixtures of or substitutes for milk or cream",708 (c)
+0044 000,Butter,709
+0045 100,Cheese: Emmenthaler or Swiss with eye formation,710
+0045 600,Cheese: Gruyere process cheese,710
+0046 010,Cheese: Romano in original loaves made from cow's milk,710
+0046 030,Cheese: Pecorino in original loaves not suitable for grating (formerly part of 0046 020),710
+0046 040,Cheese: Cheese made from sheep's milk in original loaves and suitable for grating (formerly part of 0046 020),710
+0046 110,Cheese: Reggiano in original loaves,710
+0046 120,Cheese: Parmesano in original loaves,710
+0046 230,Cheese: Provoloni in original loaves,710
+0046 250,Cheese: Provolette,710
+0046 300,Cheese: Roquefort in original loaves,710
+0046 490,"Cheese: Cheddar cheese whether or not in original loaves, but not including any cheese processed otherwise than by division into pieces",710
+0046 600,Cheese: Blue-mold cheese in original loaves,710
+0046 750,Cheese: Edam and Gouda cheese: Containing 40 percent or more of butterfat (formerly part of 0046 700),710
+0046 790,Cheese: Edam and Gouda cheese: Other (formerly part of 0046 700),710
+0046 800,"Cheese: Bryndza cheese, in casks, barrels or hogsheads, weighing with their contents more than 200 pounds each (from 0046 990)",710
+0046 940,Cheese: Sbrinz in original loaves,710
+0046 950,Cheese: Goya in original loaves,710
+0046 990,"Cheese: Other cheese, and substitutes for cheese (specify by name)",710
+0047 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Whitefish",717 (a)
+0047 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Yellow pike",717 (a)
+0047 200,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Jacks or grass pike",717 (a)
+0047 300,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Lake trout",717 (a)
+0047 400,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Yellow perch",717 (a)
+0048 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Tullibees",717 (a)
+0048 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Lake herring and ciscoes",717 (a)
+0048 200,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Chubs",717 (a)
+0048 300,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Mullet (catostomus)",717 (a)
+0048 400,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Saugers",717 (a)
+0048 500,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Blue pike",717 (a)
+0048 600,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Fresh-water fish, n.e.s: Fresh-water fish, n.e.s",717 (a)
+0048 800,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Eels",717 (a)
+0050 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Salmon",717 (a)
+0052 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Cod, haddock, hake, pollock, and cusk: Without fins removed",717 (a)
+0052 500,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Cod, haddock, hake, pollock, and cusk: With fins removed",717 (a)
+0053 900,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Halibut, fresh or frozen",717 (a)
+0054 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Mackerel: Fresh",717 (a)
+0054 500,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Mackerel: Frozen",717 (a)
+0055 300,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Swordfish: Fresh",717 (a)
+0055 500,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Swordfish: Frozen (naturally or artificially) (T. D. 48122)",717 (a)
+0055 600,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Sturgeon: Fresh",717 (a)
+0055 700,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Sturgeon: Frozen",717 (a)
+0056 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Shad",717 (a)
+0056 950,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: White sea bass or totoaba (totuava)",717 (a)
+0056 980,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Rosefish (from 0056 990)",717 (a)
+0056 990,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Other (see 0048 600)",717 (a)
+0057 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Whether or not whole: Smelts",1756
+0058 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Whether or not whole: Tuna fish (Include albacore, bluefin, horse-mackerel, yellowfin and skipjack)",1756
+0059 000,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Whether or not whole: Sea herring: Fresh",1756
+0059 200,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Whether or not whole: Sea herring: Frozen",1756
+0060 100,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Filleted, skinned, boned, sliced, or divided, n.s.p.f.: Cod, haddock, hake, pollock, cusk, and rosefish",717 (b)
+0060 300,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Filleted, skinned, boned, sliced, or divided, n.s.p.f.: Halibut, salmon, mackerel, swordfish, eels, shad, sturgeon, whitefish",717 (b)
+0060 500,"Fish: Fresh or Frozen: Whole, or beheaded, or eviscerated, or both: Filleted, skinned, boned, sliced, or divided, n.s.p.f.: Other",717 (b)
+0062 000,"Fish: Dried and unsalted: Cod, haddock, hake, pollock, and cusk",717 (b)
+0062 250,Fish: Dried and unsalted: Shark fins,717 (b)
+0062 290,Fish: Dried and unsalted: Other,717 (b)
