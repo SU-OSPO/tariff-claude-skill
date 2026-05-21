@@ -27,7 +27,7 @@ Hierarchical descriptions in the source PDF are flattened with `:` so each row i
 
 ## Installation
 
-1. Download `tariff-doc-skill.skill` from this repository.
+1. Download [`tariff-doc-skill.skill`](https://github.com/SU-OSPO/tariff-claude-skill/raw/refs/heads/main/tariff-doc-skill.skill) from this repository.
 2. In [claude.ai](https://claude.ai), go to **Customize → Skills** in the left sidebar and click **Add Skill** or **Upload Skill**.
 3. Select the `.skill` file. It will appear in your skills list and become available in all conversations.
 
