@@ -131,3 +131,5 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for the f
 ## Credits
 
 The historical Schedule A PDFs used as examples and training data are U.S. federal government works in the public domain (17 U.S.C. § 105). The example PDF was digitized by Google and made available via HathiTrust from a Penn State library copy.
+
+This project was supported as part of a grant (#[G2023-20946](https://sloan.org/grant-detail/G-2023-20946)) from the Alfred P. Sloan Foundation.
