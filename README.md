@@ -128,6 +128,13 @@ Alternatively, ask Claude to revise the skill in a conversation; it will produce
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for the full text.
 
+## Support
+
+Developed and maintained by the [Open Source Program Office](https://opensource.syracuse.edu/) at Syracuse University. Reach out for feedback and suggested improvements:
+
+- [GitHub Issues](../../issues)
+- [Email](mailto:ospo@syr.edu)
+
 ## Credits
 
 The historical Schedule A PDFs used as examples and training data are U.S. federal government works in the public domain (17 U.S.C. § 105). The example PDF was digitized by Google and made available via HathiTrust from a Penn State library copy.
