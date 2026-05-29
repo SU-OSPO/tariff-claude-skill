@@ -1,5 +1,7 @@
 # Tariff Doc Extractor Skill
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20448731.svg)](https://doi.org/10.5281/zenodo.20448731)
+
 A Claude skill for digitizing historical U.S. Schedule A tariff PDFs into structured Excel and CSV spreadsheets.
 
 This repository packages an instruction file plus training data that teaches Claude how to read scanned Schedule A tariff documents and extract their tabular contents into a machine-readable output.
