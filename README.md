@@ -27,9 +27,9 @@ Hierarchical descriptions in the source PDF are flattened with `:` so each row i
 
 ## Installation
 
-1. Download [`tariff-doc-skill.skill`](https://github.com/SU-OSPO/tariff-claude-skill/raw/refs/heads/main/tariff-doc-skill.skill) from this repository.
+1. Download the latest [`tariff-doc-skill.skill`](../../releases/latest/download/tariff-doc-skill.skill).
 2. In [claude.ai](https://claude.ai), go to **Customize → Skills** in the left sidebar and click **Add skill** (`+` button)  → **Create skill** → **Upload a skill**.
-3. Select the `.skill` file. It will appear in your skills list and become available in all conversations.
+3. Select the `tariff-doc-skill.skill` file. It will appear in your skills list and become available in all conversations.
 
 ## Usage
 
@@ -86,8 +86,8 @@ The same marker may appear on multiple pages with different meanings, so joins t
 
 ## Troubleshooting
 
-- **Claude doesn't recognize the skill** — Make sure you uploaded the `.skill` file (not just `SKILL.md`) through **Settings → Skills**. Refresh the page and start a new conversation.
-- **Training data not found** — The training data must be inside the `.skill` file. If you edited and re-uploaded only `SKILL.md`, the training data was lost. Repackage the full `.skill` file with the `references/` folder.
+- **Claude doesn't recognize the skill** — Make sure you uploaded the `tariff-doc-skill.skill` file (not just `SKILL.md`) through **Settings → Skills**. Refresh the page and start a new conversation.
+- **Training data not found** — The training data must be inside the `tariff-doc-skill.skill` file. If you edited and re-uploaded only `SKILL.md`, the training data was lost. Repackage the full `tariff-doc-skill.skill` file with the `references/` folder.
 - **Processing stops on a large document** — Split the PDF into 10–20 page chunks and process each in a separate conversation.
 
 ## Repository Structure
@@ -97,7 +97,6 @@ tariff-doc-skill/
 ├── LICENSE
 ├── README.md
 ├── SKILL.md
-├── tariff-doc-skill.skill
 ├── examples/
 │   ├── 1937_Schedule_A_Example.pdf
 │   └── 1937_Schedule_A_Example.xlsx
@@ -106,23 +105,23 @@ tariff-doc-skill/
     └── training_data.pdf
 ```
 
-The `tariff-doc-skill.skill` file is a zip archive that bundles `SKILL.md` together with the `references/` folder — this is what users upload to Claude. The unpacked `SKILL.md` and `references/` are kept at the repository root so the canonical sources are easy to review and edit on GitHub.
-
-The `references/` folder contains the training data Claude uses at runtime to calibrate extraction — description formats, commodity-number conventions, and tariff-paragraph styles. It must remain bundled inside the `.skill` file.
+The `references/` folder contains the training data Claude uses at runtime to calibrate extraction — description formats, commodity-number conventions, and tariff-paragraph styles. It must remain bundled inside the `tariff-doc-skill.skill` file.
 
 The `examples/` folder contains the sample input and output referenced in the [Example](#example) section.
+
+Each [release](../../releases) contains a `tariff-doc-skill.skill` file, which is a zip archive that bundles `SKILL.md` together with the `references/` folder — this is what users upload to Claude.
 
 ## Modifying the Skill
 
 To edit the skill manually:
 
-1. Rename `.skill` to `.zip` and unzip it.
+1. Rename `tariff-doc-skill.skill` to `tariff-doc-skill.zip` and unzip it.
 2. Edit `SKILL.md` in any text editor.
 3. Re-zip the folder, keeping `references/` inside.
-4. Rename the result back to `.skill`.
-5. Upload the updated `.skill` file in **Settings → Skills** to apply the changes.
+4. Rename the result back to `tariff-doc-skill.skill`.
+5. Upload the updated `tariff-doc-skill.skill` file in **Settings → Skills** to apply the changes.
 
-Alternatively, ask Claude to revise the skill in a conversation; it will produce an updated `SKILL.md` for download. You will still need to repackage the `.skill` file to include the `references/` folder.
+Alternatively, ask Claude to revise the skill in a conversation; it will produce an updated `SKILL.md` for download. You will still need to repackage the `tariff-doc-skill.skill` file to include the `references/` folder.
 
 ## License
 

@@ -1,0 +1,65 @@
+# .github/workflows/release-skill.yml
+#
+# Packages the skill into a distributable `.skill` archive and attaches it to
+# each published GitHub release as a downloadable asset.
+#
+# The `.skill` file is a zip whose entries live under a single top-level folder
+# named after the skill (tariff-doc-skill/SKILL.md, tariff-doc-skill/references/...).
+# This mirrors the official skill packager (skill-creator/scripts/package_skill.py),
+# including its exclusion of build artifacts (__pycache__, *.pyc, .DS_Store,
+# node_modules).
+
+name: Package skill on release
+
+# Fires whenever a release is published (covers normal releases and pre-releases).
+on:
+  release:
+    types: [published]
+
+# `gh release upload` needs write access to the repository's releases.
+permissions:
+  contents: write
+
+jobs:
+  package-skill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Stage skill payload
+        run: |
+          # Build a folder named after the skill so the archive has one clean
+          # top-level directory (tariff-doc-skill/...), which is what Claude
+          # expects when a .skill file is uploaded/installed.
+          mkdir -p build/tariff-doc-skill
+
+          # Allow-list the skill's own content rather than copying the whole
+          # repo, so repo infrastructure (README, LICENSE, .git/, .github/) is
+          # NOT bundled into the skill. If you add new skill content later
+          # (e.g. a scripts/ folder), add it to the source list below.
+          #
+          # ASSUMES SKILL.md and references/ sit at the repo root. If they live
+          # in a subfolder instead (e.g. tariff-doc-skill/SKILL.md), change the
+          # two source paths to point there.
+          rsync -a \
+            --exclude='__pycache__/' \
+            --exclude='*.pyc' \
+            --exclude='.DS_Store' \
+            --exclude='node_modules/' \
+            SKILL.md references build/tariff-doc-skill/
+
+      - name: Create .skill archive
+        run: |
+          # A .skill file is just a zip; the extension is cosmetic.
+          cd build
+          zip -r tariff-doc-skill.skill tariff-doc-skill
+          cd ..
+
+      - name: Attach .skill to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # --clobber lets a re-run replace an existing asset of the same name.
+          gh release upload "${{ github.event.release.tag_name }}" \
+            build/tariff-doc-skill.skill --clobber
