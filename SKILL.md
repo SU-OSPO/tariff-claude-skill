@@ -68,7 +68,7 @@ Historical U.S. tariff schedules come in different editions with distinct format
 | **Schedule A Commodity Number** | 25 | `XXXX XXX` format (e.g. `0010 600`) |
 | **Commodity Description** | 120 | Fully-qualified hierarchical description with colon separators |
 | **Economic Class** | 15 | The parenthetical class number, e.g. `(2)`, `(4)`, `(9)` |
-| **Unit of Quantity** | 20 | e.g. `Lb`, `No`, `Gal`, `Piece; Lb`, `Doz` |
+| **Unit of Quantity** | 20 | e.g. `Lb`, `No`, `Gal`, `Piece; Lb`, `Doz`. Keep the cattle `v` superscript inline (see **Unit of Quantity** below) |
 | **1930 Tariff Act (except as noted)** | 40 | Statutory rate, including `(Sec. 336)` notes |
 | **Trade Agreement** | 70 | GATT and country-specific concession rates with abbreviations |
 | **Tariff Paragraph** | 25 | Including compound references like `701, 2491 (c) I.R.C.` |
@@ -80,7 +80,7 @@ Historical U.S. tariff schedules come in different editions with distinct format
 | **Economic Class** | 15 | Numeric class (e.g. `2`, `4`, `5`) |
 | **Schedule A Commodity Number** | 25 | Converted from period to `XXXX XXX` format |
 | **Commodity Description** | 120 | Fully-qualified hierarchical description |
-| **Unit of Quantity** | 25 | e.g. `Lb.......1`, `No......20`, `Gal.......7` |
+| **Unit of Quantity** | 25 | e.g. `Lb.......1`, `No......20`, `Gal.......7`. Keep the cattle `v` superscript inline (see **Unit of Quantity** below) |
 | **Rate of Duty** | 60 | Full duty text with country-specific rates separated by semicolons |
 | **Tariff Paragraph** | 25 | Including Revenue Act references |
 
@@ -129,6 +129,19 @@ The 1939 edition has a **single** Rate of Duty column. Separate multiple country
 
 ### General Rule
 **Preserve duty rate formatting exactly as printed.** Keep fractions as Unicode (½, ¼, ⅛, ⅜, ⅝, ⅞, etc.), keep compound rates intact (e.g., "1¢ lb.+3¢ lb. I. R. C."), keep percentage rates as strings (e.g., "35%", "12½%"), keep "Free" as "Free". Never convert any rates to decimal numbers.
+
+---
+
+## Unit of Quantity
+
+Record the unit-of-quantity code exactly as printed: `Lb.......1`, `No......20`, `Gal.......7` (1939 edition) or `Lb`, `No`, `Gal`, `Doz` (1950 edition). Keep the dot leaders that connect the unit to its reporting code in the 1939 edition.
+
+### The cattle “v” superscript
+On the live-cattle entries (commodity numbers `0010 600`–`0010 900`) the weight line carries a small superscript **v** on the `Lb.` symbol, and the row is reported in two units — a `No.` (count) line over a `Lb.ᵛ` (weight) line. **Keep the `v` inline, inside the Unit cell, in the normal flow of the unit text — do NOT split it into a separate column.** Write it with the Unicode superscript character `ᵛ` (U+1D5B), and join the two stacked unit lines in the one cell with `; ` (semicolon-space), in printed top-to-bottom order:
+
+`No......20; Lb.ᵛ......1`
+
+This rule is specific to the cattle `v` mark; it is not a general instruction for other superscript marks on units.
 
 ---
 
@@ -468,6 +481,7 @@ Use `present_files` to share all four files with the user. Provide a brief summa
 - **Accuracy over speed.** Tariff data is used for academic research and legal analysis. Double-check a sample of extracted values against the source PDF before delivering. If you're uncertain about any values, flag them in a "Notes" column or in the metadata.
 - **Preserve original formatting of codes and rates exactly as printed.** Duty rates, commodity codes, and unit descriptions should appear in the spreadsheet character-for-character as they do in the source document. Never convert percentage strings to decimal numbers, never strip fraction characters, never reformat tariff codes.
 - **Preserve all superior notations on commodity numbers.** Annotations like *, d1, e11, L5, b, o, i, j, k carry legal meaning.
+- **Preserve the cattle unit `v` superscript inline.** On the live-cattle rows the `Lb.` line carries a superscript `v`; keep it inside the Unit cell as a Unicode superscript and combined with the count line (`No......20; Lb.ᵛ......1`), never as a separate column.
 - **Build complete description hierarchies.** Every commodity description should be prefixed with its full hierarchy of parent section headers, separated by colons. See the Commodity Description section for rules.
 - **Handle multi-page tables gracefully.** Many tariff tables span dozens or hundreds of pages. Make sure continuation pages are appended correctly without duplicating headers. Maintain hierarchy context across page breaks.
 - **Always produce all four output files.** XLSX, Tariff Data CSV, Metadata CSV, and Source PDF copy. No exceptions.
