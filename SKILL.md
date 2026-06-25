@@ -128,7 +128,7 @@ The 1939 edition has a **single** Rate of Duty column. Separate multiple country
 - `7c lb.; 35% min.; 5c lb. France; 25% min. France`
 
 ### General Rule
-**Preserve duty rate formatting exactly as printed.** Keep fractions as Unicode (½, ¼, ⅛, ⅜, ⅝, ⅞, etc.), keep compound rates intact (e.g., "1¢ lb.+3¢ lb. I. R. C."), keep percentage rates as strings (e.g., "35%", "12½%"), keep "Free" as "Free". Never convert any rates to decimal numbers.
+**Preserve duty rate formatting exactly as printed.** Keep precomposed Unicode fractions that exist as single characters (½, ¼, ¾, ⅛, ⅜, ⅝, ⅞, ⅓, ⅔, ⅙, ⅚). For fractions that do NOT have a precomposed Unicode character (e.g., 5/16, 1/20, 3/10), write them as plain text fractions using a regular slash: `5/16¢ lb.`, NOT as constructed Unicode fractions with superscript/subscript characters (`⁵⁄₁₆¢ lb.`). Constructed Unicode fractions break during Excel import. Keep compound rates intact (e.g., "1¢ lb.+3¢ lb. I. R. C."), keep percentage rates as strings (e.g., "35%", "12½%"), keep "Free" as "Free". Never convert any rates to decimal numbers.
 
 ---
 
